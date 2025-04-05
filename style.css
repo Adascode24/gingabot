@@ -1,103 +1,114 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0c2a;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+  font-family: Arial, sans-serif;
+  background: #0b0c2a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
+/* Temporizador */
+.timer {
+  background: #ff4f4f;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 1000;
+}
 
-  header {
-    background: #1a1c3c;
-    padding: 40px 20px;
-    position: relative;
-  }
-  header h1 {
-    color: #ffffff;
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  .red{
-    color:#ff0000;
-  }
-  header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-  }
-  .cta-button {
-    background: #00ff88;
-    color: #ffffff;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 300px;
-  }
-  .cta-button:hover {
-    background: #00cc66;
-  }
+header {
+  background: #1a1c3c;
+  padding: 40px 20px;
+  position: relative;
+}
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.cta-button {
+  background: #00ff88;
+  color: #000;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.cta-button:hover {
+  background: #00cc66;
+}
 
-  /* Video Section */
-  .video-container {
-    margin-top: 30px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    
-  }
-  video {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 8px;
-    margin-bottom:50px;
-  }
+/* Video Section */
+.video-container {
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+iframe {
+  width: 100%;
+  height: 500px;
+  max-width: 900px;
+  border-radius: 8px;
+}
 
-  /* Vantagens e Desvantagens */
-  section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-  }
-  section h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-  }
-  .list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .list li {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-  }
+/* Vantagens e Desvantagens */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+section h2 {
+  color: #00ff88;
+  margin-bottom: 20px;
+}
+.list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.list li {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
 
-  /* Depoimentos */
-  .testimonials {
-    background: #1e1f40;
-    padding: 30px;
-    border-radius: 8px;
-    margin-top: 30px;
-  }
-  .testimonial {
-    background: #2a2d5d;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .testimonial p {
-    font-size: 1.1em;
-  }
-  .testimonial small {
-    display: block;
-    margin-top: 10px;
-    color: #aaa;
-  }
+/* Depoimentos */
+.testimonials {
+  background: #1e1f40;
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+.testimonial {
+  background: #2a2d5d;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.testimonial p {
+  font-size: 1.1em;
+}
+.testimonial small {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+}
 
-  footer {
-    background: #1a1c3c;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: #aaa;
-  }
+footer {
+  background: #1a1c3c;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+.red{
+  color: #ff4f4f;
+}
