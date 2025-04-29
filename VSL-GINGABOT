@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gingabot - Seu Robô de Palpites Esportivos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #081b25;
+      color: #d2f8ff;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px 0;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .headline {
+      background-color: #00ff99;
+      color: #081b25;
+      text-align: center;
+      padding: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,255,153, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(0,255,153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,255,153, 0); }
+    }
+    .limited-offer {
+      background-color: #1b2e3c;
+      color: #00ff99;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px;
+      font-size: 18px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .video-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ff99;
+    }
+    .cta-button {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      background-color: #00ff99;
+      color: #081b25;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #00e68a;
+      transform: scale(1.05);
+    }
+    .vantagens-desvantagens {
+      margin-top: 30px;
+      background-color: #102633;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00ff99;
+    }
+    .vantagens-desvantagens h2 {
+      color: #00ff99;
+    }
+    .vantagens-desvantagens ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .vantagens-desvantagens li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .depoimentos {
+      margin-top: 40px;
+    }
+    .depoimento {
+      background-color: #1b2e3c;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff99;
+      animation: fadeIn 2s ease;
+    }
+    .depoimento p {
+      margin: 0;
+      font-style: italic;
+    }
+    @media (max-width: 600px) {
+      iframe {
+        height: 200px;
+      }
+      .headline {
+        font-size: 20px;
+      }
+      .cta-button {
+        padding: 12px 20px;
+        font-size: 18px;
+      }
+    }
+  </style>
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2450412428649847');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2450412428649847&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body>
+  <div class="container">
+    <div class="limited-offer">OFERTA LIMITADA</div>
+    <div class="headline">O Robô de Palpites que Vai Mudar Suas Apostas!</div>
+
+    <div class="video-section">
+      <iframe src="https://www.youtube.com/embed/oRTvQW4PV54?autoplay=1&mute=1" title="Gingabot Video de Vendas" allowfullscreen></iframe>
+    </div>
+
+    <a href="https://pay.kuenha.com/acc1f851-ea6d-4756-9b64-3f4ee18027a0" class="cta-button">Quero ter acesso Agora!</a>
+
+    <div class="vantagens-desvantagens">
+      <h2>Vantagens de ter o Gingabot</h2>
+      <ul>
+        <li>✅ Palpites diários com alta taxa de acerto (90%+)</li>
+        <li>✅ Economia de tempo: análises prontas para você</li>
+        <li>✅ Foco em estatísticas reais e algoritmos avançados</li>
+        <li>✅ Funciona direto no Telegram, sem complicação</li>
+      </ul>
+
+      <h2>Desvantagens</h2>
+      <ul>
+        <li>⚠️ Necessário seguir a gestão de banca para melhores resultados</li>
+        <li>⚠️ Nenhum robô garante 100% de acerto</li>
+        <li>⚠️ Pode ser viciante se você não controlar suas apostas</li>
+      </ul>
+    </div>
+
+    <div class="depoimentos">
+      <h2>O que dizem nossos apostadores:</h2>
+
+      <div class="depoimento">
+        <p>"Depois que comecei a seguir o Gingabot, minhas apostas mudaram de patamar! Acerto muito mais!" - <strong>João P.</strong></p>
+      </div>
+
+      <div class="depoimento">
+        <p>"Não fico mais sem ele! As análises são certeiras e os resultados falam por si!" - <strong>Marcos R.</strong></p>
+      </div>
+
+      <div class="depoimento">
+        <p>"Recebo palpites prontos, é só seguir e lucrar. Gingabot é TOP!" - <strong>Ana S.</strong></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
