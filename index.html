@@ -141,7 +141,6 @@
         const countdownContainer = document.getElementById('countdown-container');
         const offerSection = document.getElementById('offer-section');
         const ctaDelay = document.getElementById('cta-delay');
-        const mainCta = document.getElementById('main-cta');
         const offerCta = document.getElementById('offer-cta');
 
         const timer = setInterval(() => {
@@ -190,18 +189,6 @@
             }
         });
 
-        // CTA button click handler
-        mainCta.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Here you would typically redirect to checkout or show a form
-            alert('Ótima escolha! Redirecionando para a página de cadastro...');
-        });
-
-        offerCta.addEventListener('click', (e) => {
-            e.preventDefault();
-            // Here you would typically redirect to checkout or show a form
-            alert('Ótima escolha! Redirecionando para a página de cadastro...');
-        });
     </script>
 </body>
 </html>
