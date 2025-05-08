@@ -3,192 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palpite de Ouro - Transforme palpites em lucro</title>
+    <title>Palpite de Ouro - Transforme seus palpites em lucro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#000000',
-                        secondary: '#FF0000',
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s infinite',
-                    }
-                }
-            }
-        }
-    </script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .countdown {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(255, 0, 0, 0.4);
+            filter: brightness(1.1);
+        }
+        
+        .offer-card {
+            border: 1px solid #ff0000;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+        }
+        
+        .whatsapp-btn {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(37, 211, 102, 0.4);
+        }
+        
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
         }
+        
         .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
-        .offer-card {
-            border: 2px solid #FF0000;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-        }
-        .btn-primary {
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-        }
-        .countdown {
-            font-family: 'Arial', sans-serif;
-            letter-spacing: 2px;
-        }
+        
         .blink {
-            animation: blink 1s step-end infinite;
+            animation: blink 1s infinite;
         }
+        
         @keyframes blink {
-            50% { opacity: 0; }
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
-<body class="bg-primary text-gray-100 font-sans">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <!-- Countdown Timer -->
-        <div id="countdown-container" class="mb-8 text-center">
-            <p class="text-sm uppercase tracking-wider mb-2">Oferta expira em:</p>
-            <div id="countdown" class="countdown text-4xl font-bold text-secondary mb-4">
+<body>
+    <!-- Countdown Section -->
+    <div class="bg-black py-4 px-4 text-center border-b border-red-600">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-gray-300 text-sm mb-2">OFERTA POR TEMPO LIMITADO</p>
+            <div class="countdown text-4xl md:text-6xl font-bold text-red-600" id="countdown">
                 60:00
             </div>
         </div>
-
-        <!-- Headline -->
-        <div class="text-center mb-10">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                Transforme seus palpites em lucro até <span class="text-secondary">60 mil Kwanzas</span>
+    </div>
+    
+    <!-- Header Section -->
+    <header class="py-8 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">
+                Transforme suas apostas em lucro com o <span class="text-red-600">Gingabot</span>
             </h1>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                O robô de apostas que entrega os melhores jogos do dia com análises profissionais e gestão de banca inteligente.
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                O robô de apostas que entrega os melhores jogos do dia com análises profissionais e gestão de apostas inteligente.
             </p>
         </div>
-
-        <!-- Video -->
-        <div class="mb-10">
-            <div class="video-container rounded-lg overflow-hidden">
-                <iframe id="video" src="https://www.youtube.com/embed/1TTRO0L7q9c?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+    </header>
+    
+    <!-- Video Section -->
+    <section class="px-4 py-8 max-w-4xl mx-auto">
+        <div class="video-container rounded-lg overflow-hidden">
+            <iframe id="video" src="https://www.youtube.com/embed/1TTRO0L7q9c?autoplay=1&mute=0&controls=1&disablekb=1&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
-        <!-- CTA Button with Delay -->
-        <div class="text-center mb-12">
-            <div id="cta-delay" class="mb-4">
-                <p class="text-xl text-gray-300"><i class="fas fa-hourglass-half mr-2"></i> Aguarde... a oferta exclusiva será revelada em breve!</p>
-            </div>
-            <a id="main-cta" href="https://bwevipay.com/pt/checkout/5e279447-d9fe-4f65-831c-f1240aeb69a9" class="btn-primary hidden bg-secondary hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300">
-                QUERO LUCRAR COM O GiNGABOT <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-        </div>
-
-        <!-- Offer Section -->
-        <div id="offer-section" class="offer-card bg-gray-900 rounded-xl p-6 mb-10">
-            <h2 class="text-2xl font-bold text-center mb-4 text-secondary">Oferta Especial por Tempo Limitado</h2>
-            <p class="text-xl text-center mb-6">
-                "Ganhe <span class="font-bold text-secondary">10 mil kwanzas</span> no grupo VIP + Curso de Trader Esportivos "
-            </p>
-            <div class="text-center mb-4">
-                <p class="text-sm uppercase tracking-wider mb-1">Tempo restante:</p>
-                <div id="offer-countdown" class="text-2xl font-bold text-secondary">
-                    60:00
-                </div>
-            </div>
+    </section>
+    
+    <!-- CTA Button Section -->
+    <section class="px-4 py-8 text-center" id="cta-section">
+        <button id="cta-button" class="btn-primary bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-xl md:text-2xl">
+            QUERO LUCRAR COM O GINGABOT
+        </button>
+    </section>
+    
+    <!-- Offer Card Section -->
+    <section class="px-4 py-8 max-w-4xl mx-auto" id="offer-section">
+        <div class="offer-card bg-gray-900 rounded-xl p-6 md:p-8">
             <div class="text-center">
-                <a id="offer-cta" href="https://bwevipay.com/pt/checkout/5e279447-d9fe-4f65-831c-f1240aeb69a9" class="btn-primary hidden bg-secondary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg inline-block">
-                    QUERO LUCRAR COM O GiNGABOT <i class="fas fa-arrow-right ml-2"></i>
+                <h2 class="text-2xl md:text-3xl font-bold text-red-600 mb-4">Oferta Especial por Tempo Limitado</h2>
+                <p class="text-xl text-gray-300 mb-6">
+                    <span class="text-white font-bold">Ganhe 10 Mil KWanzas grátis no grupo VIP</span> + Curso de Trader Esportivo
+                </p>
+                <div class="mb-6">
+                    <p class="text-gray-400 text-sm">Tempo restante:</p>
+                    <div class="countdown text-2xl md:text-3xl font-bold text-red-600" id="countdown-small">
+                        60:00
+                    </div>
+                </div>
+                <button class="btn-primary bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+                    QUERO LUCRAR COM O GINGABOT
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- WhatsApp Section -->
+    <section class="px-4 py-8 max-w-4xl mx-auto">
+        <div class="bg-gray-900 rounded-xl p-6 md:p-8">
+            <div class="text-center">
+                <h2 class="text-2xl font-bold text-white mb-2">Ainda com dúvidas?</h2>
+                <p class="text-gray-300 mb-6">Fale com nossa equipe no WhatsApp agora mesmo.</p>
+                <a href="https://wa.me/559198340076?text=Olá,%20tenho%20uma%20dúvida%20sobre%20o%20Palpite%20de%20Ouro." class="whatsapp-btn inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg">
+                    <i class="fab fa-whatsapp mr-2"></i> Falar com Suporte no WhatsApp
                 </a>
             </div>
         </div>
-
-        <!-- WhatsApp Support -->
-        <div class="bg-gray-800 rounded-xl p-6 mb-10 text-center">
-            <h3 class="text-xl font-bold mb-2">Ainda com dúvidas?</h3>
-            <p class="mb-4">Fale com nossa equipe no WhatsApp agora mesmo.</p>
-            <a href="https://wa.me/559198340076?text=Olá,%20tenho%20uma%20dúvida%20sobre%20o%20Palpite%20de%20Ouro" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full inline-block">
-                <i class="fab fa-whatsapp mr-2"></i> Falar com Suporte no WhatsApp
-            </a>
-        </div>
-
-        <!-- Footer -->
-        <footer class="bg-black py-6 text-center text-gray-400">
-            <p>© 2025 Palpite de Ouro. Todos os direitos reservados.</p>
-            <div class="mt-2">
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Termos de uso</a> | 
-                <a href="#" class="text-gray-400 hover:text-white mx-2">Política de privacidade</a>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="bg-black py-8 px-4 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center text-gray-400">
+            <p class="mb-2">© 2025 gingabot. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-4 text-sm">
+                <a href="#" class="hover:text-white">Termos de Uso</a>
+                <a href="#" class="hover:text-white">Política de Privacidade</a>
             </div>
-        </footer>
-    </div>
-
+        </div>
+    </footer>
+    
     <script>
         // Countdown Timer
         let timeLeft = 60 * 60; // 60 minutes in seconds
         const countdown = document.getElementById('countdown');
-        const offerCountdown = document.getElementById('offer-countdown');
-        const countdownContainer = document.getElementById('countdown-container');
+        const countdownSmall = document.getElementById('countdown-small');
+        const ctaSection = document.getElementById('cta-section');
         const offerSection = document.getElementById('offer-section');
-        const ctaDelay = document.getElementById('cta-delay');
-        const offerCta = document.getElementById('offer-cta');
-
-        const timer = setInterval(() => {
-            timeLeft--;
+        
+        function formatTime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
             
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            
-            const displayTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            countdown.textContent = displayTime;
-            offerCountdown.textContent = displayTime;
+            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        function updateCountdown() {
+            countdown.textContent = formatTime(timeLeft);
+            countdownSmall.textContent = formatTime(timeLeft);
             
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                countdownContainer.innerHTML = '<p class="text-red-500 text-xl font-bold blink">⚠️ Tempo esgotado. Oferta encerrada.</p>';
-                offerSection.innerHTML = '<p class="text-red-500 text-xl font-bold text-center py-8 blink">⚠️ Tempo esgotado. Oferta encerrada.</p>';
+                countdown.textContent = "00:00:00";
+                countdownSmall.textContent = "00:00:00";
+                ctaSection.innerHTML = '<p class="text-red-600 text-xl font-bold blink">⚠️ Tempo esgotado. Oferta encerrada.</p>';
+                offerSection.innerHTML = '<p class="text-red-600 text-xl font-bold blink text-center">⚠️ Tempo esgotado. Oferta encerrada.</p>';
             }
-        }, 1000);
-
-        // Video and CTA Button Delay
-        const video = document.getElementById('video');
-        let videoStarted = false;
+            
+            timeLeft--;
+        }
         
-        // Check if video has started playing
-        const checkVideoPlayback = setInterval(() => {
-            // This is a workaround since we can't directly check YouTube iframe playback status
-            if (!videoStarted) {
-                videoStarted = true;
-                setTimeout(() => {
-                    ctaDelay.classList.add('hidden');
-                    mainCta.classList.remove('hidden');
-                    offerCta.classList.remove('hidden');
-                }, 180 * 1000); // 3 minutes delay
-            }
-        }, 1000);
-
-        // Pause/Play button functionality
-        let isPlaying = true;
-        video.addEventListener('click', () => {
-            if (isPlaying) {
-                video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                isPlaying = false;
+        const timer = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Video Custom Controls
+        const video = document.getElementById('video');
+        
+        // Customize video player
+        function customizeVideo() {
+            // This would normally require YouTube API to fully customize
+            // For demo purposes, we'll just log to console
+            console.log("Video player would be customized here");
+        }
+        
+        // Wait for YouTube API to be ready
+        window.onYouTubeIframeAPIReady = customizeVideo;
+        
+        // Responsive adjustments
+        function handleResize() {
+            // Adjust countdown font size for mobile
+            if (window.innerWidth < 768) {
+                countdown.classList.remove('text-6xl');
+                countdown.classList.add('text-4xl');
             } else {
-                video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                isPlaying = true;
+                countdown.classList.remove('text-4xl');
+                countdown.classList.add('text-6xl');
             }
-        });
-
+        }
+        
+        window.addEventListener('resize', handleResize);
+        handleResize();
     </script>
 </body>
 </html>
